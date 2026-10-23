@@ -1,0 +1,8 @@
+DROVA - FORSAKEN KIN
+Logo, Keyart und Spielsymbol: Just2D / Deck13. Alle Rechte bei den jeweiligen Rechteinhabern. Inoffizielle Fanmod. Keine Zugehoerigkeit zum Entwickler oder Publisher.
+
+Logo: https://spotlight.deck13.com/drova-forsaken-kin/
+Keyart: offizielles Steam-Bibliotheksmotiv, App 1585180.
+
+Schrift Philosopher: The Philosopher Project Authors (urspruenglicher Entwurf von Jovanny Lemonad). SIL Open Font License 1.1. Siehe Philosopher-OFL.txt. Privat im Installer geladen; keine Installation einer Systemschrift.
+https://github.com/google/fonts/tree/main/ofl/philosopher

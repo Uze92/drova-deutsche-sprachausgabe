@@ -1,0 +1,56 @@
+DROVA – AUTOMATISCHE DIALOGE
+Version 0.1.2-preview von Benchler
+
+FUNKTION
+Vertonte Dialogzeilen gehen nach Ende der laufenden Aufnahme automatisch weiter.
+Antwortauswahlen und unvertonte Texte bleiben manuell. Ein früherer manueller
+Klick bleibt möglich. Es werden keine Windows-Tastendrücke simuliert.
+
+BEDIENUNG
+Drova nach der Installation vollständig neu starten.
+Optionen > Modding > Automatische Dialoge
+„Nach der Sprachausgabe automatisch weiter“: An / Aus.
+Standard: An. Pause nach dem Sprechen: 500 Millisekunden.
+Der Regler erlaubt 0 bis 1500 Millisekunden. Einstellungen werden über Drovas
+normales Optionssystem gespeichert. Die deutsche Sprachausgabe muss aktiviert sein.
+
+INSTALLATION
+Für Windows x64 mit MelonLoader 0.7.3 und Drova Modding API 0.6.0.
+Diese Werkzeuge sind im Zusatzpaket nicht enthalten. Bei der vorhandenen
+Deutsche-Stimmen-Installation sind sie bereits eingerichtet.
+Spiel vollständig beenden. Den Inhalt des Ordners „Spielordner-Inhalt“ in den
+Ordner mit Drova.exe kopieren. Die enthaltenen Unterordner zusammenführen.
+Die Sprachaufnahmen werden weder ersetzt noch erneut heruntergeladen.
+
+ENTFERNUNG
+Spiel beenden und Mods/DrovaAutoDialogue.dll entfernen. Die beiden mitgelieferten
+BenchlerAutoDialogue-Sprachdateien können ebenfalls entfernt werden.
+MelonLoader, Modding API und DrovaVoices für die Sprachausgabe behalten.
+Alternativ die Funktion einfach im Menü ausschalten.
+
+TESTSTAND
+0.1.1: Der Nutzer hat das automatische Weiterschalten ingame bestaetigt.
+0.1.2 aendert die Standardpause auf ausdruecklichen Wunsch auf 500 ms.
+Bereits selbst gespeicherte Pausenwerte werden beibehalten.
+0.1.1 behebt die Weitergabe am Dialogende: Die erste Fassung setzte nur ein
+Flag für die Textanimation. Die Korrektur ergänzt die tatsächliche native
+Weiter-Abfrage des Dialogs. Der zuvor abgeschnittene Menü-Hinweis ist gekürzt.
+Gegen die lokal installierten Spiel-Schnittstellen kompiliert. Wiedergabeende,
+Verzögerung und die tatsächliche Mod-Anbindung wurden mit automatisierten
+Testumgebungen geprüft. Keine Ingame-Prüfung durch Codex und kein Spielstart.
+Das grundsaetzliche Weiterschalten und das sichtbare Menue wurden vom Nutzer
+mit 0.1.1 bestaetigt. Keine umfassende Abnahme aller Spielsituationen behauptet.
+Diese Ausgabe ist eine Testfassung.
+
+KURZER INGAME-TEST
+1. Ein vertontes NPC-Gespräch beginnen und eine Zeile vollständig ausreden lassen.
+2. Prüfen, ob die nächste Zeile nach kurzer Pause von selbst erscheint.
+3. Bei Antwortmöglichkeiten muss das Spiel auf deine Auswahl warten.
+4. Die Option ausschalten und prüfen, ob wieder ein Klick nötig ist.
+5. Ein Gespräch vorzeitig weiterklicken und während einer Zeile pausieren:
+   Es darf später keine zusätzliche Zeile übersprungen werden.
+
+GRENZEN
+Keine automatische Auswahl von Antworten. Kein Lesetimer für unvertonte Texte.
+Bei nicht erkanntem Aufnahmeende bleibt die Mod vorsichtig bei manueller Eingabe.
+Keine Zusicherung für andere Mods, Coop oder geänderte Spielversionen.

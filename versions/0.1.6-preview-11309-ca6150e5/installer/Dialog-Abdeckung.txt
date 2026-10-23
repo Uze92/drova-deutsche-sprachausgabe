@@ -1,0 +1,68 @@
+﻿DROVA – DIALOG-ABDECKUNG UND KORREKTUR 0.1.5
+
+BEHOBENE URSACHEN
+1. Mehrdeutige Wiedergabe: 157 Gruppen mit identischem Text und derselben Figur
+enthielten mehrere geprüfte Takes (347 Graphvorkommen). Die alte Wiedergabe gab
+bei mehreren Treffern null zurück. Jede Gruppe hat jetzt genau eine Zuordnung.
+190 redundante WAVs werden nicht mehr ausgeliefert. Originaltakes und alte
+Pakete bleiben im Produktionsarchiv erhalten.
+2. Historischer Figurenname: 23 Carima-Zeilen verwendeten intern Karim und waren
+nicht vorbereitet. Diese sind mit Carimas bestehender Stimme ergänzt.
+3. Veralteter Knoten-Cache: DTNode.actorName ermittelt zuerst den Figurenparameter
+über dessen ID und nutzt nur sonst _actorName. Die native Spielfunktion wurde
+offline untersucht. 195 Katalogeinträge weichen zwischen Cache und Parameter ab.
+25 bereits produzierte Zeilen waren dadurch falsch zugeordnet; 14 weitere,
+bisher ausgeschlossene Zeilen ließen sich eindeutig auflösen. Sie nutzen die
+bereits festgelegte Stimme der tatsächlich sprechenden Figur. Darunter sind
+fünf weitere Carima-Kurzantworten. Es wurden keine neuen Figurenstimmen angelegt.
+Zwei identische Gesina-Abweisungen verwenden eine positiv geprüfte Aufnahme
+mit exakt gleichem Wortlaut, Figur, Regie und Regieaktionen.
+17 zuvor fälschlich mitgezählte Player-/Tier-/mehrdeutige generische Zeilen
+sind aus der festen NPC-Auswahl entfernt. Ihnen wird keine falsche Stimme
+aufgrund eines alten Knotennamens zugewiesen.
+
+AKTUELLER GEPRÜFTER UMFANG
+11499 vorbereitete Quellvorkommen ergeben
+11309 eindeutige Sprechzuordnungen. Wiederholte Graphknoten
+zählen nicht als zusätzliche Sprechzeilen. Mehrere identische Stellen können
+bewusst dieselbe geprüfte Aufnahme verwenden; deshalb sind Sprechzuordnungen,
+WAV-Dateien und Quellvorkommen unterschiedliche Zählweisen.
+
+PRÜFUNG
+Alle vorbereiteten Quellanfragen wurden gegen Tree, Path, Key und den durch
+actorParameterID ermittelten tatsächlichen actorName geprüft. Auch die feste
+Stimmenzuordnung wurde verglichen. Fehlende oder mehrdeutige Treffer: 0.
+Der echte C#-Lookup wird für alle ausgelieferten Aliaszuordnungen geprüft.
+Die beiden Nutzerbeispiele und eine korrigierte Carima/Blaan-Cachebindung
+werden zusätzlich über GetAudioClip geprüft. Das sind Offline-Prüfungen mit
+Engine-Stubs, keine tatsächliche Ingame-Abnahme oder menschliche Vollhörprüfung.
+Fünf ältere, separat markierte Testaufnahmen haben weiterhin keine automatische
+Schauspiel-/Emotionsbewertung; die begrenzte Ausnahme wurde nicht erweitert.
+
+GRENZEN – KEINE ZUSAGE EINER LÜCKENLOSEN GESAMTVERTONUNG
+Die frühere Bezeichnung eines vollständigen vorbereiteten NPC-Umfangs bezog sich
+auf die eindeutig vorbereitete Auswahl, nicht jeden möglichen Dialog im Spiel.
+Spielerantworten, Regie-/Aktionszeilen, Tiere und Objekte, dynamische Texte,
+mehrdeutige Figurenvarianten und noch ungeklärte Sprecher gehören nicht automatisch
+zu dieser Auswahl. Generische Rollen wie NPC, Guard oder INSTIGATOR können je
+nach Situation unterschiedliche Figuren bedeuten. Es gibt keine zufällige
+Ersatzstimme. Die restlichen Sonderfälle sind noch nicht vollständig vertont.
+
+Noch ausgeschlossene Quellvorkommen: 7323
+Ein Eintrag kann mehrere Gründe haben; dies ist keine Anzahl fehlender normaler
+NPC-Aufnahmen. Die meisten Einträge sind Spielertext bzw. keine feste NPC-Rede.
+Gründe (Mehrfachzählung möglich):
+- animal_vocalization_preserve_or_sound_design_not_human_tts: 28
+- dynamic_text_or_markup_requires_resolution: 558
+- explicit_nonspoken_authoring_marker: 5
+- missing_or_ambiguous_german_text: 62
+- native_actor_parameter_requires_resolution: 17
+- nonhuman_or_object_role_requires_specific_casting: 5746
+- nonspoken_or_unbalanced_action_markup: 819
+- player_text_not_npc_audio: 5343
+- pure_action_or_narration_not_npc_speech: 691
+- runtime_actor_binding_required: 866
+- test_or_debug_graph: 389
+
+Ingame-Tests führt ausschließlich der Nutzer aus. Das Spiel wird von
+Produktion, Prüfungen und Installer nicht gestartet.

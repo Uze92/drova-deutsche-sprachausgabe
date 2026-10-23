@@ -1,0 +1,6 @@
+Title { Automatic dialogue }
+Enabled { Automatically continue after voiced lines }
+On { On }
+Off { Off }
+Delay { Pause after speech (milliseconds) }
+Help { Answer choices and unvoiced text remain manual. }

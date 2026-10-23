@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "design_id": "deutsche-stimmen-v2",
+  "family_label": "DEUTSCHE STIMMEN",
+  "font_family": "Segoe UI",
+  "colors": {
+    "background": "#151719",
+    "panel": "#202428",
+    "border": "#3A4045",
+    "text": "#ECE6D8",
+    "muted": "#B5B1A8",
+    "accent": "#D1AD69",
+    "accent_hover": "#E3C080",
+    "accent_text": "#17191B",
+    "secondary": "#2D3338",
+    "secondary_hover": "#343B41",
+    "success": "#96B69B",
+    "error": "#DF8C84"
+  },
+  "layout": {
+    "client_width": 1020,
+    "client_height": 720,
+    "hero_width": 338,
+    "content_margin": 30
+  },
+  "labels": {
+    "step1": "1  Spielordner",
+    "step2": "2  Vorbereitung",
+    "browse": "Auswählen …",
+    "install": "Installieren / Aktualisieren",
+    "uninstall": "Deinstallieren",
+    "close": "Schließen",
+    "status": "Status"
+  },
+  "rules": [
+    "Gemeinsame Bedienung und Typografie für alle Spiele.",
+    "Eigene Originalmotive, Icons und Texte je Spiel über profile.json.",
+    "Keine Netzwerkabfrage beim Start. Modseite nur auf ausdrücklichen Klick im Browser öffnen.",
+    "Spieladapter prüfen Zielordner und verwalten ausschließlich erlaubte Moddateien.",
+    "Laufende Installationen sperren Aktionen und Fensterschließen."
+  ]
+}

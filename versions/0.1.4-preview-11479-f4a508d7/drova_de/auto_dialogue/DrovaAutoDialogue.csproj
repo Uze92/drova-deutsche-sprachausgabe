@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems><AssemblyName>DrovaAutoDialogue</AssemblyName>
+    <InteropRoot>C:/Program Files (x86)/Steam/steamapps/common/Drova - Forsaken Kin/MelonLoader/Il2CppAssemblies</InteropRoot>
+    <LoaderRoot>../research/melonloader-0.7.3-official/MelonLoader/net6</LoaderRoot>
+  </PropertyGroup>
+  <ItemGroup><Compile Include="Core.cs"/><Compile Include="AudioEndGate.cs"/></ItemGroup>
+  <ItemGroup>
+    <Reference Include="$(InteropRoot)/*.dll"><Private>false</Private></Reference>
+    <Reference Include="../research/runtime-dependencies/Mods/Drova_Modding_API.dll"><Private>false</Private></Reference>
+    <Reference Include="$(LoaderRoot)/MelonLoader.dll"><Private>false</Private></Reference>
+    <Reference Include="$(LoaderRoot)/0Harmony.dll"><Private>false</Private></Reference>
+    <Reference Include="$(LoaderRoot)/Il2CppInterop.Runtime.dll"><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

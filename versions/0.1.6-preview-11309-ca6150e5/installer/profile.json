@@ -1,0 +1,45 @@
+﻿{
+  "schema": 1,
+  "title": "Drova – Forsaken Kin",
+  "tagline": "Düstere Wälder. Alte Mächte.\nStimmen, die dich begleiten.",
+  "description": "Vorschau · {routes} vertonte NPC-Zeilen · feste Stimmen pro Figur",
+  "folder_hint": "Ordner mit Drova.exe wählen. Steam wird automatisch erkannt.",
+  "ready_hint": "Drova vor Änderungen vollständig schließen. Spielstände und andere Mods bleiben erhalten.",
+  "state_directory": ".DrovaVoices-Setup",
+  "background": "assets/background.png",
+  "icon": "assets/icon.ico",
+  "mod_page": "https://www.nexusmods.com/drovaforsakenkin/mods/40",
+  "download_pages": [
+    "https://github.com/LavaGang/MelonLoader/releases/tag/v0.7.3",
+    "https://github.com/Drova-Modding/Drova-Modding-API/releases/tag/release-0.6.0"
+  ],
+  "tutorial": [
+    {
+      "title": "Umfang und Teststand",
+      "text": "11309 von 11309 eindeutig zugeordneten, vorbereiteten NPC-Sprechzeilen sind enthalten. Wiederholte Graphknoten zählen nicht als zusätzliche Sprechzeile. Dynamische oder noch ungeklärte Sprecher bleiben teilweise stumm; Dialog-Abdeckung.txt erläutert die Grenzen.\n\n11304 Aufnahmen haben eine Hoerbewertung. 5 weitere sind als Testaufnahmen nur technisch und quellenseitig geprueft; der Anbieter hat ihre automatische Hoerbewertung abgelehnt. Fuer diese 5 gibt es keine bestaetigten Schauspiel- oder Emotionsnoten.\n\nSpielerantworten und Gedanken bleiben Text. Die Ingame-Abnahme steht noch aus; das Setup startet Drova nicht."
+    },
+    {
+      "title": "Erste Installation",
+      "text": "DROVA – SO INSTALLIERST DU DIE SPRACHAUSGABE\n\n1. Drova vollständig schließen. Das Mod-ZIP vollständig entpacken und Deutsche-Stimmen-Setup.exe starten.\n\n2. Spielordner prüfen. Steam wird normalerweise automatisch erkannt. Bei GOG oder anderen Installationsorten über „Auswählen …“ den Ordner mit Drova.exe wählen. Die Spieldaten müssen zur Modversion passen.\n\n3. Nur beim ersten Einrichten: „Werkzeug-Downloads öffnen“ anklicken.\n\nWELCHE DATEIEN MUSS ICH AUF GITHUB HERUNTERLADEN?\n\nDu brauchst genau ZWEI ZIP-Dateien. Auf beiden Seiten nach unten bis „Assets“ scrollen. Falls die Liste eingeklappt ist, auf „Assets“ klicken.\n\n1. MELONLOADER – Seite mit der Überschrift „v0.7.3“\nKlicke unter „Assets“ genau auf: MelonLoader.x64.zip\n„x64“ ist die richtige Windows-Version für Drova.\nNicht auswählen: MelonLoader.Installer.exe, MelonLoader.x86.zip, Linux-/macOS-Dateien oder „Source code“.\n\n2. DROVA MODDING API – Seite „release-0.6.0“\nKlicke unter „Assets“ genau auf: Modding_API.zip\nNicht auswählen: Modding_API_Dev.zip, Drova_TestRunner_win-x64.zip, Drova_TestRunner_linux-x64.zip oder „Source code“.\n\nDANACH ZURÜCK ZUM SPRACHMOD-INSTALLER\nBeide ZIP-Dateien unverändert im Downloadordner lassen – NICHT entpacken und NICHT ausführen.\n• „MelonLoader 0.7.3 · ZIP wählen“ → MelonLoader.x64.zip auswählen.\n• „Drova Modding API 0.6.0 · ZIP wählen“ → Modding_API.zip auswählen.\nAnschließend „Installieren / Aktualisieren“ anklicken. Dieses Setup prüft die ZIPs und richtet die Werkzeuge selbst ein.\n\nSind beide Werkzeuge bereits in passender Version installiert, sind keine neuen Downloads erforderlich.\n\n4. „Installieren / Aktualisieren“ anklicken und auf die Erfolgsmeldung warten. Das Fenster bleibt während der Installation gesperrt. Falls Windows für den geschützten Spielordner Administratorrechte benötigt, den angezeigten Hinweis beachten.\n\n5. Drova selbst starten. Im Spiel unter Optionen > Modding > Dialogaudio aktivieren > An die Sprachausgabe einschalten. Deutsche Spielsprache wählen und Dialoglautstärke prüfen.\n\nDer erste Spielstart kann länger dauern: MelonLoader richtet Laufzeitkomponenten ein und kann dafür Internet benötigen. Das Spiel startet der Sprachmod-Installer nicht.\n\nKein Google-Konto, kein API-Schlüssel und kein Python nötig. Das Setup selbst lädt keine Dateien herunter."
+    },
+    {
+      "title": "Updates & Entfernen",
+      "text": "AKTUALISIEREN\n\nDas neue vollständige Modpaket herunterladen, komplett in einen eigenen Ordner entpacken und dessen Deutsche-Stimmen-Setup.exe starten. Denselben Spielordner auswählen und „Installieren / Aktualisieren“ anklicken.\n\nVorheriges Deinstallieren oder ein neues Spiel ist normalerweise nicht nötig. Unveränderte Dateien bleiben, geänderte Dateien werden geprüft ersetzt. Bereits eingerichtete passende Werkzeuge werden automatisch weiterverwendet. Falls eine spätere Modversion andere Werkzeuge benötigt, die in diesem Paket genannten ZIP-Versionen auswählen.\n\n„Modseite & Updates“ öffnet die eingetragene Nexus-Seite im Browser. Es gibt keine automatische Onlineprüfung.\n\nENTFERNEN\n\nDrova schließen, Setup öffnen, denselben Spielordner wählen und „Deinstallieren“ anklicken. Alternativ im Spielordner Drova-Sprachmod-entfernen.cmd starten.\n\nSpielstände und andere Mods bleiben erhalten. Gemeinsam verwendeter MelonLoader und die Modding API bleiben installiert. Das ist beabsichtigt, damit andere Mods weiter funktionieren.\n\nManuell veränderte verwaltete Dateien werden gemeldet und nicht ungefragt überschrieben oder entfernt. Sicherungen liegen im Spielordner unter .DrovaVoices-Setup/history.\n\nDie mitgelieferte Zusatzmod Automatische Dialoge wird zusammen mit der Sprachausgabe aktualisiert und entfernt. Zum Abschalten genügt ihr eigener Schalter im Modding-Menü. Gemeinsam genutzte Werkzeuge bleiben erhalten."
+    },
+    {
+      "title": "Probleme & Hinweise",
+      "text": "KEINE SPRACHE HÖRBAR?\n\n• Optionen > Modding > Dialogaudio aktivieren > An.\n• Deutsche Spielsprache und Dialoglautstärke prüfen.\n• Der eindeutig vorbereitete NPC-Umfang ist enthalten. Noch ungeklärte dynamische Sprecher und Sonderfälle können stumm bleiben; siehe Dialog-Abdeckung.txt im Paket. Spielerantworten und Gedanken bleiben Text. Bereits vergangene Gespräche werden nicht nachträglich abgespielt. Den genauen Umfang und die fünf begrenzt geprüften Testaufnahmen findest du unter Umfang und Teststand.\n• Ein neues Spiel ist für die Installation nicht erforderlich. Eine bereits früher getroffene Figur kann erst bei einem neuen unterstützten Gespräch hörbar werden.\n\nZIP WIRD ABGELEHNT?\n\nDie exakten im Installer verlinkten Originalversionen laden: MelonLoader.x64.zip aus v0.7.3 und Modding_API.zip aus release-0.6.0. Keine Quellcode-ZIPs und keine beliebige neuere Version auswählen.\n\nSPIELORDNER ODER DATEN PASSEN NICHT?\n\nDen Ordner mit Drova.exe wählen, nicht Drova_Data oder einen Unterordner der Mod. Bei anderer Spieldatenversion ein passendes Modpaket verwenden. Der Installer überschreibt keine abweichenden gemeinsamen Mod-Komponenten. Bestehende andere Mods nicht unbesehen löschen.\n\nWINDOWS MELDET EINEN UNBEKANNTEN HERAUSGEBER?\n\nDer Installer ist noch nicht digital signiert. Paketquelle prüfen. Als alternative Startdatei steht Installieren.cmd bereit; die Sicherheitsprüfung von Windows wird dadurch nicht aufgehoben.\n\nLaufzeitprotokoll: MelonLoader/Latest.log im Spielordner.\n\nWindows-x64-Vorschau. Andere Shops benötigen passende Spieldaten; GOG wurde noch nicht ingame abgenommen. Ingame-Tests macht der Modautor selbst. Kein automatischer Spielstart und keine Online-Spracherzeugung während des Spielens.\n\nNACH EINEM SPIELUPDATE\n\nVor dem erneuten Einbau Status prüfen. Bei abweichender Datenversion ein passendes Modpaket abwarten. Einbau und tatsächliches Gameplay unterscheiden: Die Ingame-Abnahme übernimmt der Modautor."
+    }
+  ],
+  "hero_title": "DROVA",
+  "next_steps": "Drova starten → Optionen > Modding: Dialogaudio aktivieren. Automatische Dialoge: An, Standardpause 500 ms; separat abschaltbar.",
+  "hero_artwork": "assets/keyart.jpg",
+  "hero_logo": "assets/logo.png",
+  "display_font_files": [
+    "assets/Philosopher-Regular.ttf",
+    "assets/Philosopher-Bold.ttf"
+  ],
+  "display_font_family": "Philosopher",
+  "download_guide": "WELCHE DATEIEN MUSS ICH AUF GITHUB HERUNTERLADEN?\n\nDu brauchst genau ZWEI ZIP-Dateien. Auf beiden Seiten nach unten bis „Assets“ scrollen. Falls die Liste eingeklappt ist, auf „Assets“ klicken.\n\n1. MELONLOADER – Seite mit der Überschrift „v0.7.3“\nKlicke unter „Assets“ genau auf: MelonLoader.x64.zip\n„x64“ ist die richtige Windows-Version für Drova.\nNicht auswählen: MelonLoader.Installer.exe, MelonLoader.x86.zip, Linux-/macOS-Dateien oder „Source code“.\n\n2. DROVA MODDING API – Seite „release-0.6.0“\nKlicke unter „Assets“ genau auf: Modding_API.zip\nNicht auswählen: Modding_API_Dev.zip, Drova_TestRunner_win-x64.zip, Drova_TestRunner_linux-x64.zip oder „Source code“.\n\nDANACH ZURÜCK ZUM SPRACHMOD-INSTALLER\nBeide ZIP-Dateien unverändert im Downloadordner lassen – NICHT entpacken und NICHT ausführen.\n• „MelonLoader 0.7.3 · ZIP wählen“ → MelonLoader.x64.zip auswählen.\n• „Drova Modding API 0.6.0 · ZIP wählen“ → Modding_API.zip auswählen.\nAnschließend „Installieren / Aktualisieren“ anklicken. Dieses Setup prüft die ZIPs und richtet die Werkzeuge selbst ein.\n\nSind beide Werkzeuge bereits in passender Version installiert, sind keine neuen Downloads erforderlich.",
+  "download_hint": "Laden: MelonLoader.x64.zip + Modding_API.zip. ZIPs nicht entpacken."
+}

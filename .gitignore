@@ -1,0 +1,8 @@
+**/bin/
+**/obj/
+**/__pycache__/
+**/research/
+.cache/
+build/
+*.user
+.env

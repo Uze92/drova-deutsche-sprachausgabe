@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable><EnableDefaultCompileItems>false</EnableDefaultCompileItems></PropertyGroup>
+  <ItemGroup><Compile Include="Program.cs"/><Compile Include="Stubs.cs"/><Compile Include="../Core.cs"/><Compile Include="../RuntimeStartGate.cs"/><Compile Include="../WaveReader.cs"/><Compile Include="../RouteLookup.cs"/></ItemGroup>
+</Project>

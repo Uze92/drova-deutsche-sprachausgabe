@@ -1,0 +1,6 @@
+Title { Automatische Dialoge }
+Enabled { Nach der Sprachausgabe automatisch weiter }
+On { An }
+Off { Aus }
+Delay { Pause nach dem Sprechen (Millisekunden) }
+Help { Antwortauswahl und unvertonte Texte bleiben manuell. }

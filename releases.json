@@ -1,0 +1,24 @@
+[
+  {
+    "version": "0.1.4-preview-11479-f4a508d7",
+    "nexus_file_id": 257,
+    "archive_sha256": "881cc9d93fa4fc362543f365de8f7778cc67f58948bb588d91d897a18f77c41e",
+    "shipped_binaries": {
+      "Mods/DrovaAutoDialogue.dll": "79c5f1cf40939e471ba4f5c45992a5f63a1bc2835f384dbd2c3b67a7abaf2099",
+      "Mods/DrovaVoices.dll": "079fab76d72ee64968a1f716d67f387baf0ba1808576be0bceb6d20c0bd92b78",
+      "Deutsche-Stimmen-Setup.exe": "c4a1a35fb1c66b90382e7631d1a44f1a64d9f5fa74650afad07b14f5f70b7b7f"
+    },
+    "routes": 11479
+  },
+  {
+    "version": "0.1.6-preview-11309-ca6150e5",
+    "nexus_file_id": null,
+    "archive_sha256": "382bc3159195b8ba11a2c750d33b842c84c96063b3ab34bad8acd171521eb783",
+    "shipped_binaries": {
+      "Mods/DrovaAutoDialogue.dll": "7b9b2080d9397f343b8900e5cf4dd3f776fb895eab2f8cf6e90f0d248d0e4558",
+      "Mods/DrovaVoices.dll": "1218a76c505896de655e7acc2a2dd4d8090355f3c8f96d2d526d74d42f6ab914",
+      "Deutsche-Stimmen-Setup.exe": "59c19847507fe65021099f56685b9d6a98882a784b543d5023fafaa7c8ded742"
+    },
+    "routes": 11309
+  }
+]

@@ -1,0 +1,96 @@
+﻿DROVA - DEUTSCHE SPRACHAUSGABE | 0.1.4-preview-11479-f4a508d7
+
+INSTALLATION (Windows 10/11, 64 Bit)
+1. ZIP komplett in einen beliebigen Ordner entpacken.
+2. Deutsche-Stimmen-Setup.exe doppelklicken. Steam wird automatisch erkannt.
+   Bei mehreren Installationen oder anderen Shops: Ordner mit Drova.exe auswaehlen.
+3. Nur beim ersten Einrichten: Download-Seiten oeffnen und die beiden
+   offiziellen ZIPs laden. Im Setup MelonLoader-ZIP und Modding-API-ZIP auswaehlen.
+   Bereits eingerichtete, passende Komponenten werden automatisch erkannt.
+4. Installieren / Aktualisieren klicken. Drova muss geschlossen sein.
+5. Im Spiel: Optionen > Modding > Dialogaudio aktivieren > An.
+6. Automatische Dialoge ist enthalten und standardmaessig an. Unter Optionen >
+   Modding > Automatische Dialoge abschaltbar; Standardpause 500 ms.
+   Antwortauswahlen und unvertonte Zeilen bleiben manuell.
+
+WELCHE DATEIEN MUSS ICH AUF GITHUB HERUNTERLADEN?
+
+Du brauchst genau ZWEI ZIP-Dateien. Auf beiden Seiten nach unten bis „Assets“ scrollen. Falls die Liste eingeklappt ist, auf „Assets“ klicken.
+
+1. MELONLOADER – Seite mit der Überschrift „v0.7.3“
+Klicke unter „Assets“ genau auf: MelonLoader.x64.zip
+„x64“ ist die richtige Windows-Version für Drova.
+Nicht auswählen: MelonLoader.Installer.exe, MelonLoader.x86.zip, Linux-/macOS-Dateien oder „Source code“.
+
+2. DROVA MODDING API – Seite „release-0.6.0“
+Klicke unter „Assets“ genau auf: Modding_API.zip
+Nicht auswählen: Modding_API_Dev.zip, Drova_TestRunner_win-x64.zip, Drova_TestRunner_linux-x64.zip oder „Source code“.
+
+DANACH ZURÜCK ZUM SPRACHMOD-INSTALLER
+Beide ZIP-Dateien unverändert im Downloadordner lassen – NICHT entpacken und NICHT ausführen.
+• „MelonLoader 0.7.3 · ZIP wählen“ → MelonLoader.x64.zip auswählen.
+• „Drova Modding API 0.6.0 · ZIP wählen“ → Modding_API.zip auswählen.
+Anschließend „Installieren / Aktualisieren“ anklicken. Dieses Setup prüft die ZIPs und richtet die Werkzeuge selbst ein.
+
+Sind beide Werkzeuge bereits in passender Version installiert, sind keine neuen Downloads erforderlich.
+
+Kein Python, kein Google-Konto und kein API-Schluessel erforderlich.
+MelonLoader 0.7.3 und Drova Modding API 0.6.0 werden einmal als Original-ZIPs
+ausgewaehlt und vor dem Einrichten per SHA-256 geprueft. Das Setup selbst
+laedt oder sendet keine Internetdateien. Die Download-Knoepfe oeffnen nur
+die offiziellen Seiten im Browser.
+Die ZIP enthaelt diese Fremdprogramme nicht als neu gepackte Dateien.
+Fuer den eigenen Download der Werkzeuge und beim ersten Spielstart ist
+Internet erforderlich. Die eigentliche Mod-Installation arbeitet offline.
+MelonLoader kann dabei zusaetzliche Laufzeitdateien und Unity-Interop erzeugen;
+der erste Spielstart kann deshalb laenger dauern.
+Falls .NET fehlt: https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+Benutzt wird die x64 Desktop Runtime. Keine Systemeinstellung dauerhaft aendern.
+
+AKTUELLER UMFANG
+11479 enthaltene NPC-Sprachzeilen. Der vollstaendige vorbereitete NPC-Dialogumfang ist enthalten.
+11474 Aufnahmen haben eine Hoerbewertung. 5 weitere sind als Testaufnahmen nur technisch und quellenseitig geprueft; der Anbieter hat ihre automatische Hoerbewertung abgelehnt. Fuer diese 5 gibt es keine bestaetigten Schauspiel- oder Emotionsnoten.
+Testversion; Ingame-Abnahme steht noch aus.
+Stimmen sind synthetisch erzeugt und den Figuren fest zugeordnet.
+Spielerantworten und Gedanken bleiben Text. Nicht vertonte Dialoge bleiben erhalten.
+Kein neues Spiel notwendig; gehoerte Dialoge werden nicht rueckwirkend abgespielt.
+
+ENTFERNEN / UPDATE
+Setup erneut oeffnen und Sprachmod entfernen klicken. Alternativ im Spielordner
+Drova-Sprachmod-entfernen.cmd starten. Spielstaende bleiben unveraendert.
+MelonLoader und Modding API bleiben fuer andere Mods installiert.
+Die mitgelieferte Zusatzmod Automatische Dialoge wird gemeinsam verwaltet und
+beim Deinstallieren ebenfalls entfernt. Sie laesst sich im Spiel separat ausschalten.
+Updates mit dem neuen ZIP ueber denselben Knopf installieren.
+Vorhandene, abweichende Loader/API-Dateien werden nicht ueberschrieben.
+Manuell geaenderte verwaltete Sprachdateien werden vor einem Update gemeldet.
+Sicherungen liegen im Spielordner unter .DrovaVoices-Setup/history.
+Der Knopf Modseite / Updates oeffnen bleibt bis zum Eintragen der echten
+Nexus-Modseite deaktiviert. Keine automatische Online-Versionspruefung.
+Das Setup ist noch nicht digital signiert; Windows kann einen Hinweis auf
+einen unbekannten Herausgeber anzeigen. Installieren.cmd dient als Alternative.
+Logo, Spielmotiv und Spielsymbol stammen aus den offiziellen Drova-Materialien
+von Just2D / Deck13. Die passende Philosopher-Schrift wird nur im Setup geladen.
+Quellen und Schriftlizenz stehen unter assets/CREDITS.txt und assets/Philosopher-OFL.txt.
+
+KOMPATIBILITAET
+Der Installer ist nicht an Steam gebunden. Er prueft die Drova-Spieldaten
+(Addressables-Katalog), nicht den Shop oder einen festen Installationspfad.
+Die aktuell vorbereitete Datenversion stammt aus der vorhandenen Windows-
+Steam-Installation. GOG/andere Shops sind vorgesehen, aber noch nicht ingame
+nachgewiesen. Bei anderem Datenstand ist ein passendes Mod-Update erforderlich.
+Linux, Steam Deck, macOS und Konsolen werden von diesem Windows-Setup nicht
+als getestet oder unterstuetzt ausgewiesen. Keine Vortex-Kompatibilitaetszusage.
+
+FEHLERSUCHE
+ZIP vollstaendig entpacken; Spiel schliessen; richtigen Ordner auswaehlen.
+Kein Ton: Dialogaudio aktivieren, deutsche Spielsprache, Dialoglautstaerke pruefen.
+Keine vorhandenen gemeinsamen Mod-Komponenten unbesehen loeschen.
+Laufzeitprotokoll: MelonLoader/Latest.log im Spielordner.
+
+QUELLEN / CREDITS
+Sprachmod: TTS Project. Inoffizielles Fanprojekt; nicht von Just2D/Deck13.
+MelonLoader: https://github.com/LavaGang/MelonLoader (Apache-2.0 und Fremdlizenzen).
+Drova Modding API: https://github.com/Drova-Modding/Drova-Modding-API (MIT).
+Die offiziellen Originalarchive werden unveraendert von dort bezogen.
+Die Abhaengigkeiten sind nicht Teil des eigenen Lizenzangebots.

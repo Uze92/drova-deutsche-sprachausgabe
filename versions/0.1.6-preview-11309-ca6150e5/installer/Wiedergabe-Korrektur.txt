@@ -1,0 +1,46 @@
+DROVA – WIEDERGABE-KORREKTUR 0.1.6
+
+Gemeldetes Problem: Bereits abgeschlossene Dialogaufnahmen werden beim Laufen
+gelegentlich erneut hörbar. Der genaue gemeldete Ingame-Zeitpunkt wurde nicht
+automatisch reproduziert; das Spiel wird ausschließlich vom Nutzer getestet.
+
+Nachgewiesene Lücken im bisherigen Code:
+- Native HandleAudio weist dem AudioSource der Figur (sonst dem Dialogfenster)
+  die Aufnahme zu und startet sie. Die Mod begrenzte diese Nutzung bisher nicht
+  auf die Lebensdauer der aktuellen Dialoganfrage.
+- Der zugewiesene Clip blieb nach Ende erhalten. Automatischen Quellenstart
+  und Schleifen hat die Mod bisher nicht ausgeschaltet. Ein aktivierter
+  AudioSource mit altem Clip kann diesen erneut starten. Der bisherige Observer
+  zeichnete playOnAwake nicht auf; die tatsächliche Einstellung jeder betroffenen
+  Ingame-Quelle und die konkrete Wiederholung sind noch nicht live nachgewiesen.
+- Die automatische Weitergabe beobachtete nur die UI-Quelle, obwohl das Spiel
+  gegebenenfalls die Quelle der Figur verwendet. Außerdem fehlte eine erneute
+  Quellen-/Clipprüfung direkt beim nativen Abfragen der Weitergabe.
+
+Korrektur:
+Eigene erzeugte Clips werden anhand ihrer registrierten Identität behandelt.
+Jede Untertitelanfrage hat eine eigene Lebensdauer. Veraltete native Iteratoren
+werden verworfen, auch wenn ein neues Gespräch denselben Clip verwendet.
+Die Verknüpfung erfolgt am tatsächlich erzeugten Kind-Iterator: IL2CPP bettet
+kleine Iterator-Fabriken direkt ein; ein Patch nur an HandleAudio() wäre wirkungslos.
+Während eigener Sprachwiedergabe: kein playOnAwake und keine Schleife.
+Nach Dialogende, Abbruch, Auswahlwechsel, UI-Deaktivierung oder Szenenwechsel:
+eigene Wiedergabe stoppen und alten Clip entfernen. Gemeinsam genutzte Quellen
+werden nur freigegeben, solange sie noch uns gehören. Fremde Clips bleiben
+unangetastet. Absichtliches erneutes Ansprechen ist weiterhin möglich.
+Abschalten der Sprachausgabe stoppt eigene Aufnahmen; die Textanzeige und ihre
+normalen Abschlussabläufe laufen weiter. Einschalten startet keine alte Zeile.
+Die Dialogautomatik beobachtet Figurenquelle bzw. UI-Fallback und verwirft
+veraltete Weitergabe bei Quellenwechsel, deaktiviertem Audio oder Neustart.
+Aufnahmen, feste Stimmen, Lautstärke und Effekte wurden nicht neu erzeugt.
+
+PRÜFUNG UND GRENZEN
+Echter Mod-Code gegen native, separat untersuchte Abläufe mit Testobjekten:
+100 wiederholte Dialog-Lebenszyklen plus Abbruch, verspäteter Start, Quellen-
+Reaktivierung, gleiche Aufnahme in neuem Gespräch, parallele Quellenbesitzer,
+fremde Sounds, deaktivierte/zerstörte UI und Audioumschaltung.
+Zusätzlich Provider-/Zuordnungs-, WAV-, Produktions- und Installertests.
+Die nativen Iteratorfelder und Abläufe wurden offline aus den installierten
+Interops und GameAssembly untersucht. Keine Ingame-Abnahme durch den Agenten.
+Nicht jede mögliche Spiel-/Modkombination ist damit ausgeschlossen. Ungeklärte
+Sprecher und andere Grenzen aus Dialog-Abdeckung.txt bleiben bestehen.
